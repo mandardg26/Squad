@@ -13,7 +13,7 @@ public static void main(String[] args) {
     for (int i = 0; i <s.length(); i++) {
     	
     	if (i%2==0) {
-    		System.out.println(s.charAt(i));
+    		System.out.println(s.charAt(i));//this is charAt method
 			
 		}
     	
