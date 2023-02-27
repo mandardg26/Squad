@@ -16,8 +16,8 @@ public static void main(String[] args) {
 		e.printStackTrace();
 		
 	}
-	catch(IOException e) {
-		e.printStackTrace();
+	catch(IOException e1) {
+		e1.printStackTrace();
 	}
 }
 }
