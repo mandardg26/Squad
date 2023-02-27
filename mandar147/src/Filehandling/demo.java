@@ -10,7 +10,7 @@ public static void main(String[] args) {
 		String s="Mandar is good boy";
 		byte b[]=s.getBytes();
 		fo.write(b);
-		System.out.println("data has been written");
+		System.out.println("data has been written"); //by default input
 	}
 	catch(FileNotFoundException e) {
 		e.printStackTrace();
