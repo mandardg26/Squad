@@ -2,7 +2,7 @@ package collectionframework;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ArraylistPerson {
+public class list_ArraylistPerson {
 	public static void main(String[] args) {
 		
 		/*

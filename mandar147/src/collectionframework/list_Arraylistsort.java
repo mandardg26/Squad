@@ -2,7 +2,7 @@ package collectionframework;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Arraylistsort {
+public class list_Arraylistsort {
 public static void main(String[] args) {
 	
 	/*by default array does not sort its members in any order

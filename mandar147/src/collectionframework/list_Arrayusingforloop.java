@@ -2,7 +2,7 @@ package collectionframework;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Arrayusingforloop {
+public class list_Arrayusingforloop {
 public static void main(String[] args) {
 	
 	ArrayList<Integer>num=new ArrayList();

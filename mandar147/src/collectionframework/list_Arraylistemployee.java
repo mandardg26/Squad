@@ -1,7 +1,7 @@
 package collectionframework;
 import java.util.*;
 
-public class Arraylistemployee {
+public class list_Arraylistemployee {
 public static void main(String[] args) {
 	
 	LinkedList<employee> li=new LinkedList<>();
