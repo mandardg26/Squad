@@ -18,7 +18,7 @@ public class list_ArraylistPerson {
 		 *      
 		 *      comparator
 		 *      
-		 *      comparator is interface having compare method this method is ud=sed to compare objects
+		 *      comparator is interface having compare method this method is used to compare objects
 		 *      steps to use comparator
 		 *      1.make new class for comparing any one variable of class
 		 *      2.implement and import comparator interface
