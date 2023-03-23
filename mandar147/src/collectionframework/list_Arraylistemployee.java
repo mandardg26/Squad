@@ -3,7 +3,7 @@ import java.util.*;
 
 public class list_Arraylistemployee {
 public static void main(String[] args) {
-	
+	 
 	LinkedList<employee> li=new LinkedList<>();
 	employee e1=new employee("Sanket",101,10000,"designer");
 	employee e2=new employee("hiten",102,20000," python designer");
