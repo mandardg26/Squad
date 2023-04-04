@@ -2,12 +2,15 @@ package gymjava;
 
 import java.util.Scanner;
 import java.util.*;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;
+import java.util.regex.*;
 
 public class maingym {
  
-	String name,nid;
+	String name;
 	int age,time;
-	long phoneno;
+	long phoneno,nid;
 	String pack;
 	String Address;
 	int count=0;
@@ -37,15 +40,18 @@ public class maingym {
 		int cost=0;
 		switch (choice) {
 		case 101: 
-			cost=p1.getRev();
+			cost=cost+p1.getRev();
+			//Total=cost;
 			break;
 			
 		case 102: 
-			cost=p2.getRev();
+			cost=cost+p2.getRev();
+			//Total=cost;
 			break;
 			
 		case 103: 
-			cost=p3.getRev();
+			cost=cost+p3.getRev();
+			//Total=cost;
 			break;
 			
 		default:
@@ -55,17 +61,36 @@ public class maingym {
 		Total=cost;
 	}
 	
+     
 	
 	void operations() {
 		System.out.println("1.Add Customer: ");
 		System.out.println("2.Update Customer: ");
 		System.out.println("3.Delete Customer: ");
 		System.out.println("4.Search Customer: ");
-		System.out.println("5.Get All Customer: ");
-		System.out.println("6.Exit: ");
+		
+		System.out.println("5.Exit: ");
 		System.out.println(" ");
 		
 		
+	}
+	public String ValName()
+	{
+		String Name = sc.next();
+		String regex = "[A-Z][a-z]*";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(Name);
+		if (m.matches()==true && Name.length()>1) 
+		{
+			name=Name;
+		}
+		else
+		{
+			System.out.println("---------------------------------------------------");
+			System.out.print("Please Enter Valid Name : ");
+			name = ValName();
+		}
+		return name;
 	}
 	
 	public long phone1() {
@@ -86,13 +111,16 @@ public class maingym {
 	
 	
 	void add() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("mmss");  
+		LocalDateTime now = LocalDateTime.now();
+		String str=dtf.format(now);
+		nid = Long.parseLong(str); 
 		
 		System.out.println("Add Customer");
 		System.out.println("Enter the name of the customer: ");
-		name=sc.next();
+		name=ValName();
 		
-		System.out.println("Enter id: ");
-		nid=sc.next();
+		
 		System.out.println("Age: ");
 		age=sc.nextInt();
 		System.out.println("enter the address: ");
@@ -101,9 +129,10 @@ public class maingym {
 		phoneno=phone1();
 		System.out.println("avability time: ");
 		time=sc.nextInt();
-		Gym gym=new Gym(name,age,phoneno,time,nid,Address);
-		c.add(gym);
 		plan();
+		Gym gym=new Gym(name,age,phoneno,time,nid,Address,Total);
+		c.add(gym);
+		
 		System.out.println("User information added successfully!!!!");
 		
 		
@@ -146,8 +175,8 @@ public class maingym {
 	  
 	 void delete() {
 		 boolean found=false;
-		 System.out.println("enter the id of the member to delete: ");
-		 String tid=sc.next();
+		 System.out.println("enter the name of the member to delete: ");
+		 long tid=sc.nextLong();
 		 Iterator<Gym> i=c.iterator();
 		 while (i.hasNext()) {
 			Gym gym=i.next();

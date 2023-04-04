@@ -1,11 +1,17 @@
 package gymjava;
 
 class Gym{
-	String name,nid;
+	String name;
 	int age,time;
 	String Address;
-	long phoneno;
+	long phoneno,nid;
 	int Total;
+	public int getTotal() {
+		return Total;
+	}
+	public void setTotal(int total) {
+		Total = total;
+	}
 	public String getName() {
 		return name;
 	}
@@ -30,10 +36,10 @@ class Gym{
 	public void setTime(int time) {
 		this.time = time;
 	}
-	public String getNid() {
+	public long getNid() {
 		return nid;
 	}
-	public void setNid(String nid) {
+	public void setNid(long nid) {
 		this.nid = nid;
 	}
 	public String getAddress() {
@@ -45,16 +51,17 @@ class Gym{
 	@Override
 	public String toString() {
 		return "Gym [name=" + name + ", age=" + age + ", phoneno=" + phoneno + ", time=" + time + ", nid=" + nid
-				+ ", Address=" + Address + "]";
+				+ ", Address=" + Address + ",Total="+Total+"]";
 	}
-	public Gym(String name, int age, long phoneno, int time, String nid, String address) {
+	public Gym(String name, int age, long phoneno, int time, long nid, String address,int Total) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.phoneno = phoneno;
 		this.time = time;
 		this.nid = nid;
-		Address = address;
+		this.Address = address;
+		this.Total=Total;
 	}
 	
 	public void display() {

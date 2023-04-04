@@ -7,6 +7,10 @@ public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	int key;
 	maingym call = new maingym();
+	
+	                                      System.out.println("-----------------------");
+	                                      System.out.println("|Tiger fitness studio|");
+	                                      System.out.println("-----------------------");
 
 	while(true){
 		call.operations();
