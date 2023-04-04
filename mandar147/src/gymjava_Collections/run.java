@@ -1,4 +1,4 @@
-package gymjava;
+package gymjava_Collections;
 import java.util.*;
 
 public class run {

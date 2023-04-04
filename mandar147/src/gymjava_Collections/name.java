@@ -1,4 +1,4 @@
-package gymjava;
+package gymjava_Collections;
 
 class Gym{
 	String name;

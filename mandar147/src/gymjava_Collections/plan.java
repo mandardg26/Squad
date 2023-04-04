@@ -1,4 +1,4 @@
-package gymjava;
+package gymjava_Collections;
 
 public class plan {
 private int id;
